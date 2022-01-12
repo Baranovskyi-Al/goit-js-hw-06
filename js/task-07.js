@@ -5,5 +5,4 @@ inputFontSize.addEventListener('input', onInputFontSizeChange);
 
 function onInputFontSizeChange(event) {
   textFontSize.style.fontSize = `${inputFontSize.value}px`;
-  console.log(textFontSize.style.fontSize);
 }

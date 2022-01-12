@@ -4,9 +4,9 @@ const loginFormPass = document.querySelector('.login-form input[type=password]')
 
 const loginFormSubmitBtn = document.querySelector('.login-form button[type=submit]');
 
-loginForm.addEventListener('submit', onClickLoginFormSubmitBtn);
+loginForm.addEventListener('submit', onLoginFormSubmitBtnClick);
 
-function onClickLoginFormSubmitBtn(event) {
+function onLoginFormSubmitBtnClick(event) {
   event.preventDefault();
   if (loginFormEmail.value === '' || loginFormPass.value === '') {
     alert('Заполните все поля!');

@@ -11,8 +11,8 @@ const categoryTechnologies = categoriesList[2];
 // Number of categories
 
 const numberOfCategories = categoriesList.length;
-const messageNumberOfCat = `Number of categories: ${numberOfCategories}`;
-console.log(messageNumberOfCat);
+const messageNumberOfCategories = `Number of categories: ${numberOfCategories}`;
+console.log(messageNumberOfCategories);
 
 // Animals
 
