@@ -1,40 +1,12 @@
-const categories = document.querySelector('#categories');
-
 const categoriesList = categories.querySelectorAll('li.item');
+const categoriesListArray = [...categoriesList];
 
-const categoryAnimals = categoriesList[0];
+const result = categoriesListArray
+  .map(
+    categories => `Category: ${categories.children[0].textContent}
+Elements: ${categories.children[1].children.length}`,
+  )
+  .join('\n\n');
 
-const categoryProducts = categoriesList[1];
-
-const categoryTechnologies = categoriesList[2];
-
-// Number of categories
-
-const numberOfCategories = categoriesList.length;
-const messageNumberOfCategories = `Number of categories: ${numberOfCategories}`;
-console.log(messageNumberOfCategories);
-
-// Animals
-
-const categoryAnimalsCaption = categoryAnimals.querySelector('h2').textContent;
-console.log(categoryAnimalsCaption);
-
-const numberOfAnimals = categoryAnimals.querySelectorAll('li').length;
-const messageNumberOfAnim = `Elements: ${numberOfAnimals}`;
-console.log(messageNumberOfAnim);
-
-// Products
-const categoryProductsCaption = categoryProducts.querySelector('h2').textContent;
-console.log(categoryProductsCaption);
-
-const numberOfProducts = categoryProducts.querySelectorAll('li').length;
-const messageNumberOfProducts = `Elements: ${numberOfProducts}`;
-console.log(messageNumberOfProducts);
-
-// Technologies
-const categoryTechnologiesCaption = categoryTechnologies.querySelector('h2').textContent;
-console.log(categoryTechnologiesCaption);
-
-const numberOfTechnologies = categoryTechnologies.querySelectorAll('li').length;
-const messageNumberOfTechnologies = `Elements: ${numberOfTechnologies}`;
-console.log(messageNumberOfTechnologies);
+console.log(`Number of categories: ${categoriesList.length}`);
+console.log(result);
