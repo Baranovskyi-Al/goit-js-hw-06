@@ -9,6 +9,7 @@ const colorValue = document.querySelector('div.widget span.color');
 widgetButtonColorChange.addEventListener('click', OnWidgetButtonColorChangeClick);
 
 function OnWidgetButtonColorChangeClick() {
-  document.body.style.backgroundColor = getRandomHexColor();
-  colorValue.innerHTML = getRandomHexColor();
+  let randomColor = getRandomHexColor();
+  document.body.style.backgroundColor = randomColor;
+  colorValue.innerHTML = randomColor;
 }
